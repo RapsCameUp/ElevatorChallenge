@@ -51,7 +51,7 @@ namespace ElevatorChallengeApplication.Models
                     CurrentFloor--;
                 }
 
-                // Simulate the time it takes to move between floors (you can adjust this as needed)
+                // Simulate the time it takes to move between floors (you can adjust this as needed to make elevator movements faster or slower)
                 Thread.Sleep(1000); // Wait for 1 second to simulate movement
 
                 // Display the current floor and elevator index while moving
@@ -62,7 +62,6 @@ namespace ElevatorChallengeApplication.Models
             CurrentDirection = Direction.Stationary;
             IsMoving = false;
             Console.WriteLine($"Elevator {(elevatorIndex != -1 ? elevatorIndex : "")} has arrived at floor {CurrentFloor}.");
-
         }
 
         // This method is used for adding a person into the elevator

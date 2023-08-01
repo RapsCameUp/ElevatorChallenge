@@ -9,6 +9,7 @@ namespace ElevatorChallengeMSTests
     [TestClass]
     public class ElevatorControllerTests
     {
+        // Call Elevator When No People Waiting - Should Not Move Any Elevator
         [TestMethod]
         public void CallElevator_WhenNoPeopleWaiting_ShouldNotMoveAnyElevator()
         {
@@ -27,10 +28,10 @@ namespace ElevatorChallengeMSTests
             }
         }
 
+        //Test setting the number of people waiting on a floor
         [TestMethod]
         public void SetNumberOfPeopleWaiting_ShouldUpdatePeopleWaitingOnFloor()
         {
-            //Test setting the number of people waiting on a floor
             int numberOfElevators = 2;
             int numberOfFloors = 10;
             int elevatorCapacity = 8;
@@ -46,7 +47,7 @@ namespace ElevatorChallengeMSTests
             Assert.AreEqual(numberOfPeopleWaiting, floor.NumberOfPeopleWaiting);
         }
 
-
+        //Find Nearest Available Elevator - Returns Nearest Available Elevator
         [TestMethod]
         public void FindNearestAvailableElevator_ElevatorsNotMoving_ReturnsNearestAvailableElevator()
         {

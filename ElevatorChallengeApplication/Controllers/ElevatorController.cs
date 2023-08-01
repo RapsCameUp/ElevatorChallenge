@@ -86,13 +86,12 @@ namespace ElevatorChallengeApplication.Controllers
                 Console.WriteLine($"Elevator {GetElevatorIndex(nearestAvailableElevator) + 1} picked up {capacity} people from Floor {floorNumber}.");
             }
 
-            int destinationFloor;
             bool validInput = false;
 
             do
             {
                 // Get the destination floor from the user's input
-                if (TryGetValidDestinationFloor(out destinationFloor))
+                if (TryGetValidDestinationFloor(out int destinationFloor))
                 {
                     // Move the elevator to the destination floor and offload
                     nearestAvailableElevator.MoveToFloor(destinationFloor, GetElevatorIndex(nearestAvailableElevator) + 1);
